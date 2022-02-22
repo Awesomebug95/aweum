@@ -36,8 +36,11 @@ class Project(Model):
         related_name='admins',
         verbose_name='Администраторы'
     )
-    created_at = models.DateTimeField(auto_now_add=True)
-    edited_at = models.DateTimeField(auto_now=True)
+    status = BooleanField(
+        default=True
+    )
+    created_at = DateTimeField(auto_now_add=True)
+    edited_at = DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Проект'
