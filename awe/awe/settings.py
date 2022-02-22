@@ -11,6 +11,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
+# AUTH
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 
@@ -24,6 +26,9 @@ INSTALLED_APPS = [
 
     # Custom Apps
     'tasks',
+    'users',
+    'projects',
+    'awe',
 
 ]
 
