@@ -14,6 +14,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 # AUTH
 AUTH_USER_MODEL = 'users.User'
 
+# REDIRECT
+LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -28,7 +30,7 @@ INSTALLED_APPS = [
     'tasks',
     'users',
     'projects',
-    'awe',
+    'awe.apps.AweConfig',
 
 ]
 
@@ -57,6 +59,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'user_filters': 'templatetags.user_filters',
+            }
         },
     },
 ]

@@ -130,3 +130,7 @@ dmypy.json
 
 commented.html
 commented2.html
+
+/static/
+aweum/awe/static
+aweum/media

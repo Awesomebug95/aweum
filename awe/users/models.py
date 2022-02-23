@@ -19,6 +19,7 @@ class User(AbstractUser):
         max_length=50
     )
     photo = ImageField(
+        blank=True,
         upload_to='users/'
     )
 
