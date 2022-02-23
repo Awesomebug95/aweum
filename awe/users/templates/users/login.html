@@ -5,8 +5,10 @@
   <div class="row justify-content-center">
     <div class="col-md-8 p-5">
       <div class="card">
-        <div class="card-header">
-          Войти на сайт
+        <div class="card-header" style="height: auto;">
+          <p style="font-size: 24px; font-family: 'JetBrains Mono'; color: black; margin-right: 30px; margin-top: 10px; ">
+              Login
+          </p>
         </div>
         <div class="card-body">
           {% if form.errors %}
@@ -39,11 +41,10 @@
                 aria-required="false"
               {% endif %}
             >
-              <label for="{{ field.id_for_label }}">
-                {{ field.label }}
-                  {% if field.field.required %}
-                    <span class="required text-danger">*</span>
-                  {% endif %}
+              <label for="{{ field.id_for_label }}" style="height: 70px;">
+                  <br>
+                  <br>
+                <p style="color:black; font-size: 18px; margin-right: 25px; margin-bottom: 0px;"><b>{{ field.label }}</b></p>
               </label>
               <div>
               {{ field|addclass:'form-control' }}
